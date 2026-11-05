@@ -246,7 +246,7 @@
 
     const empty = $("empty");
     if (state.rows.length === 0) {
-      empty.innerHTML = "<strong>Aucune entreprise pour l'instant</strong>Ajoutez la première avec « + Ajouter », ou importez un fichier CSV.";
+      empty.innerHTML = "<strong>Aucune entreprise pour l'instant</strong>Ajoutez la première avec « Ajouter », ou importez un fichier CSV.";
       empty.hidden = false;
     } else if (list.length === 0) {
       empty.innerHTML = "<strong>Aucun résultat</strong>Aucune entreprise ne correspond à ces filtres.";
@@ -305,6 +305,20 @@
   // ---------------------------------------------------------------------------
   // 6. Événements
   // ---------------------------------------------------------------------------
+  // Thème clair / sombre : suit le système, sauf choix explicite mémorisé
+  function setupTheme() {
+    const KEY = "alternance-bfc:theme";
+    const root = document.documentElement;
+    try { const t = localStorage.getItem(KEY); if (t) root.dataset.theme = t; } catch (err) { /* stockage indisponible */ }
+    $("btn-theme").addEventListener("click", () => {
+      const dark = root.dataset.theme
+        ? root.dataset.theme === "dark"
+        : matchMedia("(prefers-color-scheme: dark)").matches;
+      root.dataset.theme = dark ? "light" : "dark";
+      try { localStorage.setItem(KEY, root.dataset.theme); } catch (err) { /* stockage indisponible */ }
+    });
+  }
+
   function setupControls() {
     // Filtre par département
     $("deps").innerHTML =
@@ -564,6 +578,7 @@
   // ---------------------------------------------------------------------------
   // 8. Démarrage
   // ---------------------------------------------------------------------------
+  setupTheme();
   state.rows = load();
   setupControls();
   render(true);
