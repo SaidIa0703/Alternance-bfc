@@ -74,11 +74,19 @@
   function load() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) return JSON.parse(raw);
+      if (raw) return withSeedLinks(JSON.parse(raw));
     } catch (err) {
       banner("Impossible de lire les données enregistrées : la liste de départ est affichée.", true);
     }
     return structuredClone(window.SEED_ENTREPRISES || []);
+  }
+
+  // Les données déjà enregistrées gardent leurs modifications, mais récupèrent
+  // les liens ajoutés depuis à la liste de départ (seulement si la case est vide)
+  function withSeedLinks(rows) {
+    const seed = new Map((window.SEED_ENTREPRISES || []).map((r) => [r.id, r]));
+    rows.forEach((r) => { if (!r.lien && seed.get(r.id)?.lien) r.lien = seed.get(r.id).lien; });
+    return rows;
   }
 
   function save() {
@@ -111,6 +119,20 @@
 
   // N'autorise que les liens http(s), pour éviter les liens « javascript: »
   const safeUrl = (u) => (/^https?:\/\//i.test(u || "") ? u : "");
+
+  // Où mène le clic sur une entreprise : son site s'il est connu, sinon une recherche
+  // qui trouve en général la page carrières ou l'offre d'alternance
+  function goLink(r) {
+    const site = safeUrl(r.lien);
+    if (site) return { href: site, label: "Site", title: `Ouvrir le site de ${r.nom}`, found: true };
+    const q = [r.nom, r.ville, "alternance recrutement"].filter(Boolean).join(" ");
+    return { href: "https://www.google.com/search?q=" + encodeURIComponent(q), label: "Chercher",
+      title: `Rechercher le site et les offres de ${r.nom}`, found: false };
+  }
+  const goA = (r, cls, text) => {
+    const g = goLink(r);
+    return `<a class="${cls}${g.found ? "" : " search"}" href="${esc(g.href)}" target="_blank" rel="noopener" title="${esc(g.title)}">${text ?? g.label} ↗</a>`;
+  };
 
   const prio = (r) => Number(r.priorite) || 0;
   // Les lignes sans métier (anciennes données) comptent comme « Développement »
@@ -212,9 +234,8 @@
 
   function rowHtml(r) {
     const confirming = state.confirmId === r.id;
-    const link = safeUrl(r.lien);
     return `<tr class="${isDue(r) ? "due" : ""}">
-      <td>${input(r, "nom", "name")}${r.source ? `<div class="src">${esc(r.source)}</div>` : ""}</td>
+      <td>${input(r, "nom", "name")}<div class="src">${goA(r, "golink", goLink(r).found ? "Postuler" : "Trouver")}${r.source ? `<span>${esc(r.source)}</span>` : ""}</div></td>
       <td>${input(r, "ville")}</td>
       <td class="dep-cell"><select class="cell" data-id="${r.id}" data-k="dep" aria-label="Département">${options(DEPS.map((d) => d[0]), r.dep)}</select></td>
       <td><select class="cell metier" data-m="${esc(metierOf(r))}" data-id="${r.id}" data-k="metier" aria-label="Métier">${options(METIERS, metierOf(r))}</select></td>
@@ -227,7 +248,7 @@
       <td>${input(r, "contact")}</td>
       <td><textarea class="cell" rows="1" data-id="${r.id}" data-k="notes" aria-label="Notes">${esc(r.notes)}</textarea></td>
       <td><div class="rowact">
-        ${link ? `<a class="linkbtn" href="${esc(link)}" target="_blank" rel="noopener">Site ↗</a>` : ""}
+        ${goA(r, "linkbtn")}
         <button type="button" data-lien="${r.id}" title="Modifier le lien">Lien</button>
         <button type="button" class="${confirming ? "confirm" : "danger"}" data-del="${r.id}">${confirming ? "Confirmer" : "Suppr."}</button>
       </div></td>
@@ -281,7 +302,7 @@
       ? due.slice(0, 8).map((r) => {
           const late = Math.round((t - new Date(r.dateRelance)) / 86400000);
           return `<li>
-            <span class="who"><b>${esc(r.nom)}</b><small>${esc(r.ville)} · envoyée le ${esc(frDate(r.dateCandidature) || "?")}</small></span>
+            <span class="who">${goA(r, "whoname", esc(r.nom))}<small>${esc(r.ville)} · envoyée le ${esc(frDate(r.dateCandidature) || "?")}</small></span>
             <span class="late">${late === 0 ? "aujourd'hui" : `+${late} j`}</span>
             <button type="button" data-done="${r.id}">Relance faite</button>
             <button type="button" data-see="${esc(r.nom)}">Voir</button>
@@ -295,7 +316,7 @@
     $("todo-prio-n").textContent = top.length;
     $("todo-prio").innerHTML = top.length
       ? top.slice(0, 8).map((r) => `<li>
-          <span class="who"><b>${esc(r.nom)}</b><small>${esc(r.ville)}${r.technos ? " · " + esc(r.technos) : ""}</small></span>
+          <span class="who">${goA(r, "whoname", esc(r.nom))}<small>${esc(r.ville)}${r.technos ? " · " + esc(r.technos) : ""}</small></span>
           <span class="late">${"★".repeat(prio(r))}</span>
           <button type="button" data-sent="${r.id}">Candidature envoyée</button>
         </li>`).join("")

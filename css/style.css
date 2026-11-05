@@ -258,6 +258,8 @@ svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width:
 .todo li:hover { border-color: var(--line); background: var(--surface); }
 .todo li .who { flex: 1 1 160px; min-width: 0; }
 .todo li .who b { font-weight: 600; }
+.whoname { font-weight: 600; color: var(--fg); text-decoration: none; border-radius: 4px; }
+.whoname:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .todo li .who small { color: var(--muted); display: block; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .todo li .late { font-family: var(--font-mono); font-size: 12px; color: var(--warn); font-weight: 500; }
 .todo li button { padding: 5px 10px; font-size: 12px; }
@@ -382,13 +384,24 @@ select.metier[data-m="Cybersécurité"] { color: var(--accent); }
   font-size: 12px; font-weight: 500; color: var(--accent); white-space: nowrap; text-decoration: none;
   padding: 4px 8px; border-radius: 7px; background: var(--accent-soft);
 }
-.linkbtn:hover { text-decoration: underline; }
+.linkbtn:hover { background: var(--accent); color: var(--accent-fg); }
+.linkbtn.search { background: var(--surface-3); color: var(--muted); }
+.linkbtn.search:hover { background: var(--fg); color: var(--bg); }
 .rowact { display: flex; gap: 4px; align-items: center; }
 .rowact button { padding: 4px 9px; font-size: 12px; border-color: transparent; background: transparent; color: var(--muted); }
 .rowact button:hover { background: var(--surface-3); color: var(--fg); }
 .rowact button.danger:hover { color: var(--bad); background: var(--bad-soft); }
 .rowact button.confirm { background: var(--bad); border-color: var(--bad); color: #fff; }
-.src { font-size: 11px; color: var(--muted); padding: 0 7px 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 220px; }
+.src { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); padding: 0 7px 4px; max-width: 240px; min-width: 0; }
+.src span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.golink {
+  flex: none; font-weight: 600; font-size: 10.5px; text-decoration: none; white-space: nowrap;
+  padding: 1px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+  transition: background-color 150ms, color 150ms;
+}
+.golink:hover { background: var(--accent); color: var(--accent-fg); }
+.golink.search { background: var(--surface-3); color: var(--muted); }
+.golink.search:hover { background: var(--fg); color: var(--bg); }
 
 /* Priorité */
 .stars { display: inline-flex; gap: 0; }

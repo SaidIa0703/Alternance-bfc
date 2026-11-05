@@ -48,7 +48,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.aprr.fr",
     "notes": "Offre d'alternance développeur low code (rentrée 2025)",
     "source": "Offre alternance vue sur France Travail (2025)"
   },
@@ -65,7 +65,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.aprr.fr",
     "notes": "Offre « Alternant administrateur système »",
     "source": "Offre alternance vue sur France Travail (2025)"
   },
@@ -133,7 +133,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.apside.com",
     "notes": "ESN avec activité cybersécurité",
     "source": "Piste : Annuaire du CSIRT Bourgogne-Franche-Comté"
   },
@@ -150,7 +150,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.assystem.com",
     "notes": "Offre d'ingénieur informatique systèmes",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -167,7 +167,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://recrutement.bpce.fr",
     "notes": "Filiale informatique du groupe BPCE",
     "source": "Offre développeur vue sur France Travail (2025)"
   },
@@ -201,7 +201,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.celad.com",
     "notes": "Offre d'administrateur / analyste système",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -235,7 +235,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://recrutement.bpce.fr",
     "notes": "Banque régionale, recrute régulièrement des alternants",
     "source": "Piste : candidature spontanée"
   },
@@ -252,7 +252,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://groupecreditagricole.jobs",
     "notes": "",
     "source": "Piste : candidature spontanée"
   },
@@ -303,7 +303,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.metropole-dijon.fr",
     "notes": "Viser la direction des systèmes d'information",
     "source": "Piste : candidature spontanée"
   },
@@ -354,7 +354,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.helpline.fr",
     "notes": "Offre ingénieur de production informatique repérée",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -388,7 +388,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://iutdijon.u-bourgogne.fr",
     "notes": "Offre technicien / développeur d'application ; sites aussi à Auxerre et Nevers",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -439,7 +439,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.orangecyberdefense.com/fr/",
     "notes": "Détection des menaces et réponse aux incidents",
     "source": "Piste : Annuaire du CSIRT Bourgogne-Franche-Comté"
   },
@@ -541,7 +541,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.safran-group.com",
     "notes": "Offre d'alternance cybersécurité (Bac+5) auprès du RSSI du site",
     "source": "Offre alternance vue sur RH Alternance (2024)"
   },
@@ -592,7 +592,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.u-bourgogne.fr",
     "notes": "Offre d'administrateur systèmes et réseaux",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -694,7 +694,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.chu-besancon.fr",
     "notes": "Offre d'analyste SOC repérée",
     "source": "Offre vue sur Indeed (2026)"
   },
@@ -728,7 +728,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://groupecreditagricole.jobs",
     "notes": "",
     "source": "Piste : candidature spontanée"
   },
@@ -745,7 +745,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.doubs.fr",
     "notes": "Présent au salon de l'alternance de Besançon",
     "source": "Salon de l'alternance de Besançon"
   },
@@ -762,7 +762,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.doubs.fr",
     "notes": "Offre d'administrateur en sécurité informatique repérée",
     "source": "Offre vue sur Indeed (2026)"
   },
@@ -779,7 +779,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.extia-group.com",
     "notes": "Offre développeur IHM C# WPF (industrie) repérée",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -813,7 +813,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.grandbesancon.fr",
     "notes": "Présente au salon de l'alternance de Besançon",
     "source": "Salon de l'alternance de Besançon"
   },
@@ -830,7 +830,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.grandbesancon.fr",
     "notes": "Recrute un RSSI : le service sécurité pourrait accueillir un alternant",
     "source": "Offre vue sur Indeed (2026)"
   },
@@ -881,7 +881,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.manpower.fr",
     "notes": "Agence d'intérim, poste chez un client",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -983,7 +983,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.univ-fcomte.fr",
     "notes": "Offre d'adjoint au RSSI (DSIN) repérée",
     "source": "Offre vue sur Indeed (2026)"
   },
@@ -1000,7 +1000,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.urssaf.org",
     "notes": "Présente au salon de l'alternance de Besançon",
     "source": "Salon de l'alternance de Besançon"
   },
@@ -1102,7 +1102,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.hays.fr",
     "notes": "Cabinet de recrutement, poste de développeur chez un acteur médical",
     "source": "Offre vue sur France Travail (2025)"
   },
@@ -1153,7 +1153,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.nievre.fr",
     "notes": "Viser la direction du numérique",
     "source": "Piste : candidature spontanée"
   },
@@ -1170,7 +1170,7 @@ window.SEED_ENTREPRISES = [
     "dateCandidature": "",
     "dateRelance": "",
     "contact": "",
-    "lien": "",
+    "lien": "https://www.haute-saone.fr",
     "notes": "Viser la direction des systèmes d'information",
     "source": "Piste : candidature spontanée"
   },
