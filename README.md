@@ -79,7 +79,7 @@ Les données sont stockées dans **un seul navigateur, sur un seul appareil**. V
 
 ## 👤 Auteur
 
-**Abdelghani Saidi** — étudiant en 3ᵉ année de bachelor à Colint School, en recherche d'alternance.
+**Abdelghani Saidi**  étudiant en 3ᵉ année de bachelor à Colint School, en recherche d'alternance.
 [GitHub](https://github.com/SaidIa0703) · [LinkedIn](https://www.linkedin.com/in/abdelghani-saidi-0469982a0) · [Portfolio](https://abdel-portfolio-s.saidiabdelghani0703.workers.dev/)
 
 <sub>Les informations sur les entreprises proviennent d'offres publiques (France Travail, Indeed, salons de l'alternance) et de l'annuaire du CSIRT Bourgogne-Franche-Comté, consultés en 2025-2026. Vérifiez-les avant de candidater.</sub>
